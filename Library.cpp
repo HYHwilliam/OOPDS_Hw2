@@ -267,7 +267,7 @@ void Library::searchByAuthor()
 
     if (!result_part.empty())
     {
-        cout << "Similar title found: " << endl;
+        cout << "Similar author found: " << endl;
         print(result_part);
     }
 }
@@ -311,7 +311,7 @@ void Library::searchByGenre()
 
     if (!result_part.empty())
     {
-        cout << "Similar title found: " << endl;
+        cout << "Similar genre found: " << endl;
         print(result_part);
     }
 }
@@ -458,7 +458,7 @@ void Library::returnBook()
             {
                 b.copies++;
                 cout << "Book returned successfully." << endl;
-                cout << "Now Availanle: " << b.copies << endl;
+                cout << "Now Available: " << b.copies << endl;
                 b.counter--;
             }
             else
