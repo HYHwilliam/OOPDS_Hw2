@@ -23,8 +23,9 @@ Use a C++ compiler such as `g++`:
 ```bash
 g++ main.cpp Library.cpp Book.cpp -o library
 ./library
+```bash
 
-### 2. The menu
+ 2. The menu
 Library Menu:
 1. Add Book
 2. Search Book
