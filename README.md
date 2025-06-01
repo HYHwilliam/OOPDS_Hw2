@@ -20,16 +20,12 @@ Friendly, interactive menu interface.
 Use a C++ compiler such as g++:
 
 bash
-複製
-編輯
 g++ main.cpp Library.cpp Book.cpp -o library
 ./library
 2. Menu Options
 Once the program starts, you'll see:
 
 markdown
-複製
-編輯
 Library Menu:
 1. Add Book
 2. Search Book
@@ -45,8 +41,6 @@ Enter a number 1 to 6 to perform the corresponding operation.
 You will be prompted to enter the following:
 
 yaml
-複製
-編輯
 Title: <book title>
 Author: <author name>
 Genre: <genre>
@@ -55,15 +49,11 @@ Available Copies: <positive integer>
 If the book already exists (same title, author, genre, and year), you’ll be asked:
 
 pgsql
-複製
-編輯
 Would you like to update the number of available copies? (Y/N):
 2. Search Book
 You will be prompted to select a search method:
 
 markdown
-複製
-編輯
 Search Book by:
 1. Book Title
 2. Author
@@ -76,15 +66,11 @@ The system will list exact matches and similar matches.
 
 3. Checkout Book
 css
-複製
-編輯
 Enter book title to checkout: <title>
 If the book exists and copies are available, checkout is successful and copies will be decreased by 1. Otherwise, an error message is displayed.
 
 4. Return Book
 kotlin
-複製
-編輯
 Enter book title to return: <title>
 Returns the book and increases the copy count. Only accepted if the book was checked out before.
 
@@ -92,16 +78,12 @@ Returns the book and increases the copy count. Only accepted if the book was che
 Displays all books in a nicely formatted table, sorted by title. Example:
 
 markdown
-複製
-編輯
 No.  Title                          Author              Genre               Year  Copies
 ------------------------------------------------------------------------------------------
 1    THE HOBBIT                     J.R.R. TOLKIEN      Fantasy             1937  5
 2    TO KILL A MOCKINGBIRD          HARPER LEE          Fiction             1960  2
 📂 Project Structure
 kotlin
-複製
-編輯
 .
 ├── Book.h        # Book class declaration
 ├── Book.cpp      # Book class implementation
