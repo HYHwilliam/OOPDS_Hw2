@@ -373,7 +373,7 @@ void Library::searchBook()
         cout << "3. Genre\n";
         cout << "4. Year\n";
         cout << "5. Finish and Exit\n";
-        cout << "Enter your choice: ";
+        cout << "Enter your choice (1-5): ";
         cin >> choice;
 
         if (choice.length() != 1)
