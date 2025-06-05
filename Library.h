@@ -6,6 +6,9 @@ class Library
 private:
     vector<Book> books;
     void sortByTitle(vector<Book> &arr);
+    void mergeSort(vector<Book> &arr, int left, int right);
+    void merge(vector<Book> &arr, int left, int mid, int right);
+
 
 public:
     void toLower(string &s);
