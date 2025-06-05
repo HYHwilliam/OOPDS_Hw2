@@ -9,7 +9,6 @@ private:
     void mergeSort(vector<Book> &arr, int left, int right);
     void merge(vector<Book> &arr, int left, int mid, int right);
 
-
 public:
     void toLower(string &s);
     void toUpper(string &s);
