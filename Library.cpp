@@ -123,7 +123,7 @@ void Library::print(vector<Book> result)
     cout << left << setw(5) << "No.";
     cout << setw(30) << "Title";
     cout << setw(20) << "Author";
-    cout << setw(20) << "Genre";
+    cout << setw(25) << "Genre";
     cout << setw(6) << "Year";
     cout << setw(8) << "Copies" << endl;
     cout << "----------------------------------------------------------------------------------------------------\n";
@@ -138,7 +138,7 @@ void Library::print(vector<Book> result)
 
         cout << left << setw(5) << index++;
         cout << left << setw(30) << utitle;
-        cout << left << setw(20) << uauthor;
+        cout << left << setw(25) << uauthor;
         cout << left << setw(20) << b.genre;
         cout << left << setw(6) << b.year;
         cout << left << setw(8) << b.copies << endl;
