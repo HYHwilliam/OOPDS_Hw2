@@ -32,23 +32,61 @@ void Library::toUpper(string &s)
         }
     }
 }
+void Library::merge(vector<Book> &vec, int left, int mid, int right)
+{
+    vector<Book> L, R;
+
+    for (int i = left; i <= mid; i++)
+    {
+        L.push_back(vec[i]);
+    }
+    for (int i = mid + 1; i <= right; i++)
+    {
+        R.push_back(vec[i]);
+    }
+
+    int i = 0, j = 0, k = left;
+
+    while (i < L.size() && j < R.size())
+    {
+        string titleL = L[i].title;
+        toLower(titleL);
+        string titleR = R[j].title;
+        toLower(titleR);
+
+        if (titleL <= titleR)
+        {
+            vec[k] = L[i];
+            i++;
+        }
+        else
+        {
+            vec[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < L.size())
+        vec[k++] = L[i++];
+    while (j < R.size())
+        vec[k++] = R[j++];
+}
+
+void Library::mergeSort(vector<Book> &vec, int left, int right)
+{
+    if (left < right)
+    {
+        int mid = left + (right - left) / 2;
+        mergeSort(vec, left, mid);
+        mergeSort(vec, mid + 1, right);
+        merge(vec, left, mid, right);
+    }
+}
 
 void Library::sortByTitle(vector<Book> &vec)
 {
-    for (auto i = 0; i < vec.size(); i++)
-    {
-        for (auto j = 0; j + 1 < vec.size(); j++)
-        {
-            toLower(vec[j].title);
-            toLower(vec[j + 1].title);
-            if (vec[j].title > vec[j + 1].title)
-            {
-                Book temp = vec[j];
-                vec[j] = vec[j + 1];
-                vec[j + 1] = temp;
-            }
-        }
-    }
+    mergeSort(vec, 0, vec.size() - 1);
 }
 
 int Library::findBookExist(string &title, string &author, int year, string &genre)
